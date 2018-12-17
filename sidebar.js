@@ -365,15 +365,18 @@ let VerticalTabsReloaded = class VerticalTabsReloaded
                     const fac = new FastAverageColor();
                     fac.getColorAsync(imgEl, (color) =>
                     {
-                        if(color.isDark)
+                        if(!color.error)
                         {
-                            imgEl.classList.remove("tab-icon-image-light");
-                            imgEl.classList.add("tab-icon-image-dark");
-                        }
-                        else
-                        {
-                            imgEl.classList.remove("tab-icon-image-dark");
-                            imgEl.classList.add("tab-icon-image-light");
+                            if(color.isDark)
+                            {
+                                imgEl.classList.remove("tab-icon-image-light");
+                                imgEl.classList.add("tab-icon-image-dark");
+                            }
+                            else
+                            {
+                                imgEl.classList.remove("tab-icon-image-dark");
+                                imgEl.classList.add("tab-icon-image-light");
+                            }
                         }
                         log.debug(color);
                         fac.destroy();
