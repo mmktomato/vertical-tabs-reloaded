@@ -367,7 +367,7 @@ let VerticalTabsReloaded = class VerticalTabsReloaded
                     {
                         if(!color.error)
                         {
-                            //if(color.isDark)
+                            // if(color.isDark)
                             if(color.value[0] <= 80 && color.value[1] <= 80 && color.value[2] <= 80)
                             {
                                 imgEl.classList.remove("tab-icon-image-light");
@@ -381,7 +381,7 @@ let VerticalTabsReloaded = class VerticalTabsReloaded
                         }
                         log.debug(color);
                         fac.destroy();
-                    }, { mode: 'precision' });
+                    }, {mode: "precision"});
                 }
 
                 log.debug("status: " + tabElement.getAttribute("status"));
