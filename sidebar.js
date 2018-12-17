@@ -367,7 +367,8 @@ let VerticalTabsReloaded = class VerticalTabsReloaded
                     {
                         if(!color.error)
                         {
-                            if(color.isDark)
+                            //if(color.isDark)
+                            if(color.value[0] <= 80 && color.value[1] <= 80 && color.value[2] <= 80)
                             {
                                 imgEl.classList.remove("tab-icon-image-light");
                                 imgEl.classList.add("tab-icon-image-dark");
