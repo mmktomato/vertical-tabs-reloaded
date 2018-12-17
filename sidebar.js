@@ -380,7 +380,7 @@ let VerticalTabsReloaded = class VerticalTabsReloaded
                         }
                         log.debug(color);
                         fac.destroy();
-                    });
+                    }, { mode: 'precision' });
                 }
 
                 log.debug("status: " + tabElement.getAttribute("status"));
